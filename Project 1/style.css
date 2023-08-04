@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -43,7 +44,7 @@ header {
 }
 
 .container img {
-    width: 14rem;
+    width: 14.2rem;
     height: 12rem;
     object-fit: fill;
 }
