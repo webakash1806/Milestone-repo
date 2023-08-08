@@ -25,7 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
         let desc = addBlogDesc.value
         let detail = addBlogDetail.value
 
+        // let urlRegex = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ig
+        // let addImgUrlRegex = img.match(urlRegex)
+        // console.log(addImgUrlRegex)
 
+        // if (addImgUrlRegex) {
+        //     alert("Invalid")
+        // }
 
         if (img && title && desc && detail) {
             const blog = { img, title, desc, detail }
