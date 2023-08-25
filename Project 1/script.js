@@ -3,6 +3,7 @@ let cutBtn = document.getElementById("cutBtn")
 let addBlog = document.getElementById("addBlog")
 
 
+
 addBtn.addEventListener("click", () => {
     addBlog.classList.add("active")
 })
@@ -37,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const blog = { img, title, desc, detail }
             console.log(blog)
             addBlogToLocal(blog)
-            displayBlog()
+            displayBlogList()
             addBlog.classList.remove("active")
         }
     })
@@ -49,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("blogs", JSON.stringify(blogs))
     }
 
-    function displayBlog() {
+    function displayBlogList() {
 
         let blogs = JSON.parse(localStorage.getItem("blogs")) || []
         let mainSection = document.getElementById("mainSection")
@@ -62,17 +63,13 @@ document.addEventListener("DOMContentLoaded", function () {
             mainContainer.innerHTML = `<img src="${blog.img}" alt="">
             <p class="blog-title">${blog.title}</p>
             <p class="blog-desc">${blog.desc}</p>
-            <button class="read-btn" id="readBtn">Read</button>`
+            <a href="./readBlogPage/blogPage.html?id=${index}" class="read-btn" id="readBtn">Read</a>`
 
             mainSection.appendChild(mainContainer)
+
         });
+
     }
 
-
-
-    // document.getElementById("readBtn").addEventListener("click",(e)=>{
-
-    // })
-
-    displayBlog()
+    displayBlogList()
 })
