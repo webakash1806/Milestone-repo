@@ -30,11 +30,15 @@ header {
 }
 
 #addBtn {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 34px;
     font-weight: 400;
     background-color: #1A73E8;
     border-radius: 50%;
-    padding: 0 14px;
     color: #fff;
     cursor: pointer;
 }
@@ -90,6 +94,8 @@ header {
 
 .add-blog-detail {
     min-height: 15rem;
+    max-width: 22.6rem;
+
 }
 
 #addBlogBtn {
