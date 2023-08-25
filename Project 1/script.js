@@ -41,6 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
             displayBlogList()
             addBlog.classList.remove("active")
         }
+        else {
+            alert("Fill all of the Boxes!")
+        }
     })
 
 
@@ -72,4 +75,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     displayBlogList()
+
 })
