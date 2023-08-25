@@ -15,6 +15,10 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -44,7 +48,47 @@ header {
 
 section {
     border-radius: 5px;
-    box-shadow: 0px 0px 5px #5c5c5c;
-    margin: 20px 40px 40px 40px;
-    padding: 25px;
+    box-shadow: 0px 0px 15px #7700c79c;
+    margin: 25px 60px 45px 60px;
+    padding: 30px;
+}
+
+.blog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 10px 20px #7700c79f;
+    background-color: #7700c7;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.blog-header-left {
+    width: 50%;
+}
+
+.blog-title {
+    margin-bottom: 15px;
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.blog-des {
+    width: 80%;
+    font-size: 18.5px;
+    font-weight: 500;
+    color: #d7d7d7;
+}
+
+.blog-header-right img {
+    margin: 20px;
+    width: 320px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px #ffffff;
+}
+
+.blog-detail {
+    padding: 30px 20px;
+    font-size: 17px;
 }
