@@ -7,6 +7,7 @@
 
 body {
     background-color: #030303fb;
+    color: #fff;
     width: 100vw;
     overflow-x: hidden;
 }
@@ -23,7 +24,7 @@ header {
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 500;
     letter-spacing: 1.5px;
 }
@@ -54,6 +55,7 @@ header {
 
 main {
     display: grid;
+    justify-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 20px;
     padding: 35px 75px;
@@ -64,7 +66,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
     width: 16.2rem;
     background-color: #222222;
@@ -81,7 +83,9 @@ main {
 }
 
 .movie-container img {
-    width: 150px;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
     box-shadow: 0px 0px 5px #fff;
 }
 
@@ -109,4 +113,12 @@ main {
 
 .movie-container button:hover {
     transform: rotateX(360deg);
+}
+
+main h1 {
+    position: absolute;
+    top: 50%;
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
