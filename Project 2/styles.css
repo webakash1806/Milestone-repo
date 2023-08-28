@@ -90,6 +90,7 @@ main {
     letter-spacing: 0.2px;
     font-weight: 500;
     color: #fff;
+    text-align: center;
 }
 
 .movie-container button {
