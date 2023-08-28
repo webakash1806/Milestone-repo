@@ -23,11 +23,8 @@ searchBtn.addEventListener("click", () => {
             <button>Watch Now</button>
         </div>`
                 });
-
                 movieMainContainer.innerHTML = movieData.join('')
-
-                console.log(movieMainContainer)
-
+                // console.log(movieMainContainer)
             }
             catch (err) {
                 movieMainContainer.innerHTML = `<h1 class="error-message">OOPS! Nothing is here</h1>`
@@ -35,9 +32,6 @@ searchBtn.addEventListener("click", () => {
             }
         }
         fetchData()
-
     }
-
-
 })
 
