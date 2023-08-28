@@ -18,7 +18,7 @@ searchBtn.addEventListener("click", () => {
                 let movieData = data.Search.map((movie) => {
                     return `<div class="movie-container" id="movieContainer">
             <img src="${movie.Poster}"
-                alt="">
+                alt="${movie.Title}">
             <p class="title" id="movieTitle">${movie.Title}</p>
             <button>Watch Now</button>
         </div>`
