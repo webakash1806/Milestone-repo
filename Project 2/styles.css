@@ -54,9 +54,10 @@ header {
 }
 
 main {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     padding: 35px 75px;
 }
