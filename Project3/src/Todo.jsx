@@ -12,12 +12,6 @@ const Todo = () => {
         }
     }
 
-    const editItem = (index, updateEdit) => {
-        const updateItem = [...todo]
-        updateItem[index] = updateEdit
-        setTodo(updateItem)
-    }
-
     const handleUpdateStatus = (index) => {
         const updatedTodos = [...todo];
         updatedTodos[index].status =
@@ -46,27 +40,27 @@ const Todo = () => {
                             <div className="todo-container" key={index}>
                                 <p className="number">{index + 1}</p>
                                 {item.status === "completed" ?
-                                    <textarea value={item.title} onChange={(e) => editItem(index, e.target.value)} /> :
-                                    <textarea value={item.title} onChange={(e) => editItem(index, e.target.value)} style={{ textDecoration: "line-through" }} />
+                                    <textarea value={item.title} readOnly /> :
+                                    <textarea value={item.title} readOnly style={{ textDecoration: "line-through" }} />
                                 }
-                                <p className="status">{item.status === "completed" ? "pending" : "completed"}</p>
-                                <button onClick={() => handleUpdateStatus(index)}>
+                                <p className="status">{item.status === "completed" ? "Status : Pending" : "Status : Completed"}</p>
+                                <button className="btn" onClick={() => handleUpdateStatus(index)}>
                                     Update Status
                                 </button>
-                                <button className="remove" onClick={() => removeItem(index)}>Remove</button>
+                                <button className="remove btn" onClick={() => removeItem(index)}>Remove</button>
                             </div>
                             :
                             <div className="todo-container green" key={index}>
                                 <p className="number">{index + 1}</p>
                                 {item.status === "completed" ?
-                                    <textarea value={item.title} onChange={(e) => editItem(index, e.target.value)} /> :
-                                    <textarea value={item.title} onChange={(e) => editItem(index, e.target.value)} style={{ textDecoration: "line-through" }} />
+                                    <textarea value={item.title} /> :
+                                    <textarea value={item.title} style={{ textDecoration: "line-through" }} />
                                 }
-                                <p className="status">{item.status === "completed" ? "pending" : "completed"}</p>
-                                <button onClick={() => handleUpdateStatus(index)}>
+                                <p className="status">{item.status === "completed" ? "Status : Pending" : "Status : Completed"}</p>
+                                <button className="btn" onClick={() => handleUpdateStatus(index)}>
                                     Update Status
                                 </button>
-                                <button className="remove" onClick={() => removeItem(index)}>Remove</button>
+                                <button className="remove btn" onClick={() => removeItem(index)}>Remove</button>
                             </div>}
                     </>
                 })}
