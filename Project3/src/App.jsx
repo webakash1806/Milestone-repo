@@ -4,7 +4,10 @@ import './App.css'
 const App = () => {
   return (
     <>
-      <Todo />
+      <div className="main">
+        <p className="head">To Do App With React</p>
+        <Todo />
+      </div>
     </>
   )
 }
